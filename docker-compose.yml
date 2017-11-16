@@ -8,14 +8,14 @@ services:
     # restart: always
     build:
       context: .
-      dockerfile: ./compose/node/Dockerfile_dev
+      dockerfile: ./compose/dockerfile_dev
     ports:
       - '3000:3000'
     environment:
-      DATABASE_URL: "mongodb://mongo:27017/livematch"
+      DATABASE_URL: "mongodb://mongo:27017/askguage"
     volumes:
-      - .:/home/app/livematch-backend
-      - /home/app/livematch-backend/node_modules
+      - .:/home/app/askguage-backend
+      - /home/app/askguage-backend/node_modules
     depends_on:
       - mongo
   mongo:

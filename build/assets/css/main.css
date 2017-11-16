@@ -1,0 +1,31 @@
+.match-list .card {
+    border: none;
+}
+
+.match-list .card img {
+    border-radius: 5px;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.match-list .card a {
+    color: #141823;
+    text-decoration: none;
+}
+
+.match-list .card a .card-content {
+    padding-left: .5rem;
+}
+
+.match-list .card a:hover {
+    text-decoration: none;
+    color: #ea9215;
+}
+.match-list .card a h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.match-list .card a p {
+    font-size: 1rem;
+    font-weight: 100;
+}

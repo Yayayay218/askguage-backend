@@ -2,14 +2,11 @@ var mongoose = require('mongoose'), Schema = mongoose.Schema;
 var mongoosePaginate = require('mongoose-paginate');
 
 var matchSchema = new mongoose.Schema({
-    name: String,
+    title: String,
     description: String,
-    date: Date,
-    time: Number,
-    status: Number,
-    isRequired: Boolean,
-    index: Number,
-    slug: String,
+    url: String,
+    type: Number,
+    coverPhoto: String,
     createdAt: {
         type: Date,
         default: Date.now()

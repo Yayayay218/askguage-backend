@@ -1,15 +1,10 @@
 var mongoose = require('mongoose'), Schema = mongoose.Schema;
-var mongoosePaginate = require('mongoose-paginate');
 
 var settingSchema = new mongoose.Schema({
-    name: String,
-    status: Boolean,
-    createdAt: {
-        type: Date,
-        default: Date.now()
-    },
-    updatedAt: Date
-});
+    services: [{type: Schema.Types.ObjectId, ref:'Services'}],
+    banks : [{type: Schema.Types.ObjectId, ref:'Banks'}],
+    languages: [{type: Schema.Types.ObjectId, ref:'Languages'}],
+    lenders: [{type: Schema.Types.ObjectId, ref:'Lenders'}]
+})
 
-settingSchema.plugin(mongoosePaginate);
 mongoose.model('Settings', settingSchema);
